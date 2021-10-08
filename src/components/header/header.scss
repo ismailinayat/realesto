@@ -1,0 +1,173 @@
+
+.header {
+
+    position: relative;
+    background-color: #1f2937;
+    height: 85vh;
+    width: 100%;
+    &__background {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60%;
+        width: 100%;
+        background-image: linear-gradient(
+            to right,
+            rgba(31,41,55, 0.8),
+            rgba(31,41,55, 0.8),
+        ),
+        url(./AIimage.jpg);
+    
+        background-size: cover ;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+
+    }
+
+    .heading {
+
+        z-index: 10;
+        position: absolute;
+        color: rgba(255, 255, 255, 0.856);
+        max-width: 50rem;
+        left: 50%;
+        top: 12rem;
+        transform: translateX(-50%);
+        text-align: center;
+
+        &__primary {
+
+            text-transform: uppercase;
+            line-height: 2.5rem;
+            margin-bottom: 1rem;
+            animation: moveInLeft 1s ease-out;
+        }
+
+        &__secondary {
+
+            font-weight: 200;
+            font-size: 1.3rem;
+            animation: moveInRight 1s ease-out;
+        }
+
+        .button__primary {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            display: inline-block;
+            letter-spacing: 2px;
+            margin-top: 5rem;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 10rem;
+            background-color: #eabd23;
+            cursor: pointer;
+            transition: all 0.2s;
+            animation: moveInBottom 1s ease-out 0.4s;
+            animation-fill-mode: backwards;
+
+
+            &::after {
+
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                display: inline-block;
+                border: none;
+                border-radius: 10rem;
+                background-color: #eabd23;
+                transition: all 0.4s;
+                z-index: -1;
+
+            }
+
+            &:hover::after {
+
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+            
+
+
+            &:hover {
+
+                transform: translateY(-3px);
+                box-shadow: 0 0.5rem 1rem rgba(100, 86, 5, 0.2);
+            }
+
+            &:active {
+                transform: translateY(-1px);
+                box-shadow: 0 0.3rem 0.5rem rgba(100, 86, 5, 0.2);
+            }
+        }
+    }
+
+    .brands {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: space-around;
+        width: 90rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5rem;
+
+        &__brand {
+
+            &-image {
+
+                width: 8rem;
+            }
+        }
+    }
+
+    
+}
+
+@keyframes moveInLeft {                        
+
+    0% {                                          
+  
+        opacity: 0;                               
+  
+        transform: translateX(-10rem);            
+                                                    
+  }
+    80% {
+        transform: translateX(1rem);             
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  
+  @keyframes moveInRight {
+    0% {                                          
+        opacity: 0;                               
+        transform: translateX(10rem);             
+  }
+    80% {
+        transform: translateX(-1rem);              
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  
+  
+  @keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+  }
+  
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }

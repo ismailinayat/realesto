@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #777;
+  overflow-x: hidden;
+                                                          /*Now all of the above font properties will be applied to all of the text in our website unless we specifically change these in another element selector.*/
+}
+
