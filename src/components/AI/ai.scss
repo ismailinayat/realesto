@@ -10,6 +10,7 @@
         margin: 0 auto;
         color: rgba(255, 255, 255, 0.856);
         display: flex;
+        position: relative;
         //background-image: url('./images/ai2.png');
         //background-size: cover;
 
@@ -41,7 +42,7 @@
 
             &--secondary {
 
-                width: 30rem;
+                width: 100%;
 
                 line-height: 1.5rem;
                 color: rgba(255, 255, 255, 0.74);
@@ -57,8 +58,10 @@
         }
 
         &__image {
-
+            position: absolute;
             width: 50%;
+            height: 100%;
+            right: 0;
             background-image: 
                 linear-gradient(to right,
                                 rgba(black, 1) 0%, rgba(black, 0.8) 20%, transparent 100%                
