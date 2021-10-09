@@ -1,0 +1,73 @@
+
+.ai_section {
+
+    //background-color: rgb(55,65,81) ;
+    background-color: black ;
+
+
+    .container {
+
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.856);
+        display: flex;
+        //background-image: url('./images/ai2.png');
+        //background-size: cover;
+
+
+        &__heading {
+
+
+            padding: 6rem 10rem;
+            //width: 75rem;
+            width: 50%;
+            &--primary {
+
+                margin-bottom: 4rem;
+                h2 {
+
+                    text-transform: uppercase;
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    line-height: 3rem;
+
+                    span {
+
+                        color: #eabd23;
+                        border-bottom: 1px solid #eabd23;
+                    }
+
+                }
+            }
+
+            &--secondary {
+
+                width: 30rem;
+
+                line-height: 1.5rem;
+                color: rgba(255, 255, 255, 0.74);
+                .paragraph {
+
+                    &:not(:last-child) {
+
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+            }
+        }
+
+        &__image {
+
+            width: 50%;
+            background-image: 
+                linear-gradient(to right,
+                                rgba(black, 1) 0%, rgba(black, 0.8) 20%, transparent 100%                
+                ),
+                url(./images/ai3reduced.jpg);
+
+            background-position: top center;
+
+        }
+ 
+    }
+}
